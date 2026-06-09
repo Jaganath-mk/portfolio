@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
 from .models import Feedback
+from django.conf import settings
 
 def home(request):
     return render(request, 'main/home.html')
@@ -22,7 +23,7 @@ def submit_feedback(request):
         # Send email notification
         subject = "New Feedback Submitted"
         body = f"Name: {name}\nEmail: {email}\nMessage:\n{message}"
-        send_mail(subject, body, 'jaganathmk2020.mgce@gmail.com', ['jaganathmk2020.mgce@gmail.com'])
+        send_mail(subject, body, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER],fail_silently=True)
 
         return render(request, "main/home.html", {"show_thank_you": True})
 
