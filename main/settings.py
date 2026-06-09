@@ -20,7 +20,7 @@ SECRET_KEY = 'django-insecure-9&30n*=1hn17t$wduaq&k7thpysn9*g-z9em_nyyl6vrxx1#mt
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://portfolio-production-3546c.up.railway.app',
+    'portfolio-production-3546c.up.railway.app',
     '127.0.0.1',
     'localhost'
 ]
