@@ -15,7 +15,7 @@ from django.core.mail import send_mail
 def submit_feedback(request):
     if request.method == "POST":
         return render(request, "home.html", {"show_thank_you": True})
-    return render(request, "home.html")
+    return render(request, "main/home.html")
  
     
 def thank_you(request):
