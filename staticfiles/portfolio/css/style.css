@@ -1,0 +1,449 @@
+body{
+    background:#0a0a0a;
+    color:white;
+    overflow-x:hidden;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    padding:100px 0;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0,212,255,0.05),
+        rgba(0,212,255,0.01)
+    );
+    z-index: 1;            /* keep gradient behind content */
+    pointer-events: none;  /* allow clicks to pass through */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;            /* ensure buttons are above overlay */
+}
+
+
+.profile-pic{
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #00d4ff;
+
+    box-shadow:
+    0 0 30px #00d4ff;
+
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.name{
+
+    font-size:70px;
+
+    font-weight:800;
+
+    color:#00d4ff;
+}
+
+.role{
+    margin-bottom:20px;
+}
+
+.typing-container{
+
+    color:#00d4ff;
+
+    font-size:24px;
+
+    margin-bottom:20px;
+}
+
+.hero-text{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+}
+
+.glow-btn{
+
+    background:#00d4ff;
+
+    color:black;
+
+    margin-right:10px;
+
+    font-weight:bold;
+}
+
+.glow-btn:hover{
+
+    box-shadow:
+    0 0 25px #00d4ff;
+}
+
+.glow-btn-outline{
+
+    border:2px solid #00d4ff;
+
+    color:#00d4ff;
+}
+
+.glow-btn-outline:hover{
+
+    background:#00d4ff;
+
+    color:black;
+}
+
+.social-icons{
+
+    margin-top:30px;
+}
+
+.social-icons a{
+
+    color:#00d4ff;
+
+    font-size:30px;
+
+    margin-right:20px;
+
+    transition:.3s;
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-5px);
+}
+
+.skill-card,
+.project-card,
+.glass-card{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin:15px;
+
+    transition:.4s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.glass-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 20px #00d4ff;
+}
+
+.section-title{
+
+    text-align:center;
+
+    color:#00d4ff;
+
+    margin-bottom:60px;
+}
+
+.timeline{
+
+    border-left:
+    3px solid #00d4ff;
+
+    padding-left:30px;
+}
+
+.timeline-content{
+
+    margin-bottom:40px;
+}
+.navbar{
+    transition:0.4s;
+    padding:20px 0;
+}
+
+.navbar-scrolled{
+
+    background:rgba(10,10,10,0.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 20px rgba(0,212,255,.2);
+}
+
+.logo{
+
+    color:#00d4ff !important;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:20px;
+
+    transition:0.3s;
+}
+
+.nav-link:hover{
+
+    color:#00d4ff !important;
+}
+.skill{
+    margin-bottom:30px;
+}
+
+.progress{
+    height:25px;
+    background:#222;
+}
+
+.progress-bar{
+
+    background:#00d4ff;
+
+    font-weight:bold;
+}
+
+.skill-python{
+    width:90%;
+}
+
+.skill-django{
+    width:85%;
+}
+
+.skill-ml{
+    width:75%;
+}
+.grid-background{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-1;
+
+    background-image:
+        linear-gradient(rgba(0,212,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,.08) 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    animation:gridMove 20s linear infinite;
+}
+
+@keyframes gridMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(50px);
+    }
+}
+.terminal-box{
+
+    background:#111;
+
+    border-radius:12px;
+
+    margin-top:30px;
+
+    overflow:hidden;
+
+    border:1px solid #00d4ff;
+}
+
+.terminal-header{
+
+    background:#1d1d1d;
+
+    padding:10px;
+
+    color:#00d4ff;
+}
+
+.terminal-box pre{
+
+    color:#00ff88;
+
+    padding:20px;
+
+    margin:0;
+}
+.project-image{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    transition:0.4s;
+}
+
+footer{
+
+    padding:40px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    margin-top:100px;
+
+    text-align:center;
+}
+.project-card{
+    overflow:hidden;
+}
+.project-card:hover .project-image{
+
+    transform:scale(1.05);
+}
+#about {
+    margin-bottom: 40px; 
+}
+.cert-card {
+    background: #111;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,212,255,0.3);
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+.modal-content {
+    background-color: #111; /* dark background */
+    color: #fff;            /* white text */
+    border-radius: 8px;
+}
+.modal-header {
+    border-bottom: 1px solid #333;
+}
+.modal-body {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.project-modal-image {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+css
+.cert-card {
+    background: #111;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0,212,255,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.6);
+}
+.cert-icon {
+    width: 40px;
+    margin-bottom: 10px;
+}
+.skill h5 {
+    margin-bottom: 8px;  /* uniform label spacing */
+}
+
+.skill {
+    margin-bottom: 25px;   /* consistent spacing */
+}
+.skill:last-child {
+    margin-bottom: 0;      /* no extra gap after last */
+}
+
+.progress {
+    height: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+
+
+#contact {
+    margin-bottom: 30px; /* reduce this value */
+}
+
+#feedback {
+    margin-top: 7px; /* reduce this value */
+}
+
+.skill-python { width: 90%; background-color: #1abc9c; }
+.skill-django { width: 70%; background-color: #3498db; }
+.skill-mysql  { width: 90%; background-color: #f39c12; }
+.skill-ml     { width: 40%; background-color: #9b59b6; }
+

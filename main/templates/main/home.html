@@ -1,0 +1,535 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        
+
+
+        <a class="navbar-brand logo" href="#">
+            &lt;Jaganath MK/&gt;
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMenu">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5 text-center">
+
+                <img
+                    src="{% static 'portfolio/images/9744809395.jpg' %}"
+                    class="profile-pic"
+                    alt="Profile">
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <h4 class="greeting">
+                    Hello World, I'm
+                </h4>
+
+                <h1 class="name">
+                    Jaganath MK
+                </h1>
+
+                <h2 class="role">
+                    Developer
+                </h2>
+
+                <div class="typing-container">
+                    <span id="typing"></span>
+                </div>
+
+                <p class="hero-text">
+                    Passionate developer focused on
+                    web development, machine learning,
+                    and building impactful solutions.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects"
+                       class="btn glow-btn">
+                       View Projects
+                    </a>
+
+                    <a href="#contact"
+                       class="btn glow-btn-outline">
+                       Contact Me
+                    </a>
+                    {% load static %}
+                   <a href="{% static 'portfolio/resume/resume.pdf' %}" 
+   class="btn glow-btn" 
+   download>
+   <i class="fa fa-download"></i> Download Resume
+</a>
+
+
+                </div>
+
+                <div class="social-icons">
+    <!-- GitHub -->
+    <a href="https://github.com/Jaganath-mk" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/jaganath-m-k-38a6872a0" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:jaganathmk2020.mgce@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+
+                <div class="terminal-box">
+
+    <div class="terminal-header">
+        portfolio.py
+    </div>
+
+<pre>
+class Developer:
+
+    name = "Jaganath MK"
+
+    role = "Developer"
+
+    skills = [
+        "Python",
+        "Django",
+        "Machine Learning",
+        "MySQL"
+    ]
+
+    passion = "Building Real Projects"
+</pre>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="about" data-aos="fade-up">
+    <div class="container">
+        <h2>About Me</h2>
+
+        <p>
+           I hold a B.Tech degree in Electronics and Communication, but my true passion lies in coding and software development. Most of my skills have been acquired through self‑learning, using diverse online resources and hands‑on practice. This journey has shaped me into a resilient developer who thrives on solving problems, building real projects, and continuously expanding my knowledge beyond formal academics.
+        </p>
+    </div>
+</section>
+
+<section id="projects" class="container my-5">
+    <h2 class="section-title text-center">Projects</h2>
+    <div class="row">
+        <!-- Smart Trolley -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <img src="{% static 'portfolio/images/Smart_Trolley.jpg' %}" class="project-image">
+                <h3>Smart Trolley</h3>
+                <p>
+                    This innovative project introduces a customer-following trolley powered by a gyroscope sensor in a mobile phone.
+                    It features automated billing, displaying item details on a screen whenever products are added.
+                    YOLOv8 enables real-time image detection, with Django as the backend and React as the frontend for a seamless shopping experience.
+                </p>
+                <!-- Button to trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#smartTrolleyModal">
+                    View Details
+                </button>
+            </div>
+        </div>
+
+        <!-- Anti-Theft Floating System -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <img src="{% static 'portfolio/images/Anti-theft.jpg' %}" class="project-image">
+                <h3>Anti-Theft Floating System</h3>
+                <p>
+                    This IoT-based project enhances security by detecting tampering or theft attempts,
+                    using smart sensors and a floating mechanism to remain operational in tough environments.
+                    Real-time alerts are sent to users, ensuring rapid response and protection of assets.
+                </p>
+                <!-- Button to trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#antiTheftModal">
+                    View Details
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Smart Trolley Modal -->
+<!-- Smart Trolley Modal -->
+<div class="modal fade" id="smartTrolleyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Smart Trolley</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Project Image -->
+        <img src="{% static 'portfolio/images/Smart_Trolley.jpg' %}" class="project-modal-image" alt="Smart Trolley">
+
+        <!-- Description -->
+        <p>
+          This innovative project introduces a customer-following trolley powered by a gyroscope sensor in a mobile phone.
+          It features automated billing, displaying item details on a screen whenever products are added.
+          YOLOv8 enables real-time image detection, with Django as the backend and React as the frontend for a seamless shopping experience.
+        </p>
+
+        <!-- Components Used -->
+        <h6>Components Used:</h6>
+        <ul>
+          <li>Gyroscope Sensor (Mobile Integration)</li>
+          <li>YOLOv8 for Object Detection</li>
+          <li>Django Backend</li>
+          <li>React Frontend</li>
+          <li>QR Code Payment System</li>
+        </ul>
+
+        <!-- Demo/GitHub Links -->
+        <h6 class="mt-4">Share Your Suggestions:</h6>
+<form>
+  <div class="mb-3">
+    <textarea class="form-control" rows="3" placeholder="Write your opinion..."></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Anti-Theft Modal -->
+<div class="modal fade" id="antiTheftModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Anti-Theft Floating System</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Project Image -->
+        <img src="{% static 'portfolio/images/Anti-theft.jpg' %}" class="project-modal-image" alt="Anti-Theft System">
+
+        <!-- Description -->
+        <p>
+          This IoT-based project enhances security by detecting tampering or theft attempts,
+          using Piezo electronic sensors to remain operational in tough environments.
+          Real-time alerts are sent to users, ensuring rapid response and protection of assets.
+        </p>
+
+        <!-- Components Used -->
+        <h6>Components Used:Piezo sensors, ESP-32 Microcontroller, GSM-Module, Buzzer</h6>
+        <ul>
+          <li>Piezo Sensors</li>
+          <li>ESP-32 Microcontroller </li>
+          <li>GSM-800L Module</li>
+          <li>C++ Programming Language</li>
+          <li>Arduino IDE</li>
+        </ul>
+
+        <!-- Demo/GitHub Links -->
+        <h6 class="mt-4">Share Your Suggestions:</h6>
+<form>
+  <div class="mb-3">
+    <textarea class="form-control" rows="3" placeholder="Write your opinion..."></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<section id="certifications" class="container my-5">
+    <h2 class="section-title text-center">Certifications</h2>
+    <div class="row">
+        <div class="cert-card">
+    <img src="{% static 'portfolio/images/linkedin.jpg' %}" alt="Python Logo" class="cert-icon">
+    <h4>Microsoft Azure AI Essentials(Linkedin)</h4>
+    <p>Understand the concept regarding the workload and Machine Learning on Azure</p>
+    <span class="badge bg-info">Backend</span>
+    <span class="badge bg-success">2024</span>
+    
+</div>
+        <div class="cert-card">
+    <img src="{% static 'portfolio/images/Hackerrank.webp' %}" alt="Python Logo" class="cert-icon">
+    <h4>Python Programming Solving (HackerRank)</h4>
+    <p>Completed through online learning platform, covering core concepts and problem-solving.</p>
+    <span class="badge bg-info">Python</span>
+    <span class="badge bg-success">2025</span>
+    
+</div>
+
+     <div class="cert-card">
+    <img src="{% static 'portfolio/images/Python.jpg' %}" alt="Python Logo" class="cert-icon">
+    <h4>Completed Leetcode 75</h4>
+    <p>Solved 75 important coding problems and learned a lot about arrays, linked lists, recursion, trees, and more using Python.</p>
+    <span class="badge bg-info">Backend</span>
+    <span class="badge bg-success">2024</span>
+    
+</div>
+            <div class="cert-card">
+    <img src="{% static 'portfolio/images/mysql.jpg' %}" alt="Python Logo" class="cert-icon">
+    <h4>MySql Explorer</h4>
+    <p>Excited to earn my MySQL badge from Oracle! Looking forward to applying these skills in real-world projects</p>
+    <span class="badge bg-info">Backend</span>
+    <span class="badge bg-success">2024</span>
+    
+</div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skill">
+            <h5>Python</h5>
+            <div class="progress">
+                <div class="progress-bar skill-python">90%</div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h5>Django</h5>
+            <div class="progress">
+                <div class="progress-bar skill-django">70%</div>
+            </div>
+        </div> 
+
+        <div class="skill">
+            <h5>MySQL</h5>
+            <div class="progress">
+                <div class="progress-bar skill-mysql">90%</div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h5>Machine Learning</h5>
+            <div class="progress">
+                <div class="progress-bar skill-ml">40%</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="education" data-aos="fade-up">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-content">
+
+                    <h4>B.Tech Electronics and Communication</h4>
+
+                    <p>
+                        College Of Engineering Thalassery
+                    </p>
+
+                    <span>2021 - 2025</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="stats">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+
+                <div class="glass-card">
+
+                    <h1>2+</h1>
+
+                    <p>Major Projects</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="glass-card">
+
+                    <h1>150+</h1>
+
+                    <p>Problems Solved</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="glass-card">
+
+                    <h1>2025</h1>
+
+                    <p>Graduate</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" data-aos="fade-up">
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <p>Email: jaganathmk2020.mgce@gmail.com</p>
+<p>GitHub: <a href="https://github.com/Jaganath-mk" target="_blank">github.com/Jaganath-mk</a></p>
+<p>LinkedIn: <a href="https://linkedin.com/in//jaganath-m-k-38a6872a0" target="_blank">linkedin.com/in/Jaganath_MK</a></p>
+
+
+    </div>
+</section>
+
+
+
+
+
+<section id="feedback" class="container my-5">
+    <h2 class="section-title text-center">Feedback</h2>
+    {% if show_thank_you %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("feedback").scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+<div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
+  <strong>Thank you!</strong> Your feedback has been submitted successfully.
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+{% endif %}
+
+
+
+    <form method="POST" action="{% url 'submit_feedback' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Your Suggestions</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit Feedback</button>
+    </form>
+</section>
+
+
+
+<div class="grid-background"></div>
+
+<footer>
+
+    <div class="container text-center">
+
+        <p>
+            © 2026 Jaganath MK
+        </p>
+
+        <p>
+            Built with Django & Bootstrap
+        </p>
+
+    </div>
+
+</footer>
+
+{% endblock %}
