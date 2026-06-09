@@ -22,7 +22,7 @@ def submit_feedback(request):
         # Send email notification
         subject = "New Feedback Submitted"
         body = f"Name: {name}\nEmail: {email}\nMessage:\n{message}"
-        send_mail(subject, body, 'yourgmail@gmail.com', ['yourgmail@gmail.com'])
+        send_mail(subject, body, 'jaganathmk2020.mgce@gmail.com', ['jaganathmk2020.mgce@gmail.com'])
 
         return render(request, "main/home.html", {"show_thank_you": True})
 
